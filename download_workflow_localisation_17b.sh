@@ -73,12 +73,6 @@ if [ ! -d "/home/runner/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes" ]; t
     git reset --hard HEAD
 fi
 
-if [ ! -d "/home/runner/ComfyUI/custom_nodes/Fooocus_Nodes" ]; then
-    git clone --no-tags --recurse-submodules --shallow-submodules https://github.com/Seedsa/Fooocus_Nodes /home/runner/ComfyUI/custom_nodes/Fooocus_Nodes && \
-    cd /home/runner/ComfyUI/custom_nodes/Fooocus_Nodes && \
-    git reset --hard HEAD
-fi
-
 if [ ! -d "/home/runner/ComfyUI/custom_nodes/ComfyUI_essentials" ]; then
     git clone --no-tags --recurse-submodules --shallow-submodules https://github.com/cubiq/ComfyUI_essentials /home/runner/ComfyUI/custom_nodes/ComfyUI_essentials && \
     cd /home/runner/ComfyUI/custom_nodes/ComfyUI_essentials && \
