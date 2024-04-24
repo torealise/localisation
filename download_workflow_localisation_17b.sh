@@ -18,6 +18,12 @@ git reset --hard HEAD
 cd $repo_path/custom_nodes
 
 if [ ! -d "/home/runner/ComfyUI/custom_nodes/ComfyUI-KJNodes" ]; then
+    git clone --no-tags --recurse-submodules --shallow-submodules https://github.com/ltdrdata/ComfyUI-Manager /home/runner/ComfyUI/custom_nodes/ComfyUI-Manager && \
+    cd /home/runner/ComfyUI/custom_nodes/ComfyUI-Manager && \
+    git reset --hard HEAD
+fi
+
+if [ ! -d "/home/runner/ComfyUI/custom_nodes/ComfyUI-KJNodes" ]; then
     git clone --no-tags --recurse-submodules --shallow-submodules https://github.com/kijai/ComfyUI-KJNodes /home/runner/ComfyUI/custom_nodes/ComfyUI-KJNodes && \
     cd /home/runner/ComfyUI/custom_nodes/ComfyUI-KJNodes && \
     git reset --hard HEAD
